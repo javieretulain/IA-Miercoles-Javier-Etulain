@@ -6,6 +6,10 @@ from groq import Groq
 st.set_page_config(page_title="Chat ETU", page_icon="🤖")
 st.title("Chat de Javi")
 
+nombre = st.text_input("Cual es tu nombre?")
+if st.button("Saludar!"):
+    st.write(f"Hola {nombre}! Bienvenido a talento tech")
+
 MODELOS = ['llama-3.1-8b-instant', 'llama-3.3-70b-versatile']
 
 def configurar_pagina():
@@ -93,3 +97,4 @@ if __name__ == "__main__":
 # Correr streamlit con la terminal de Python
 
 # python -m streamlit run MiChat.py (aca deben ingresar el nombre del archivo)
+
